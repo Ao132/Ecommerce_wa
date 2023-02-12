@@ -1,19 +1,20 @@
 import 'package:ecom_wael_hamza/core/constants/image_asset_constant.dart';
 import 'package:ecom_wael_hamza/data/model/on_boarding_model.dart';
+import 'package:get/get.dart';
 
 List<OnBoardingModel> onBoardingList = [
   OnBoardingModel(
-      title: "Choose Product",
-      body: "We Have a 100k Product , Choose \n Your Product From  Our \n E-commerce Shop",
-      image: ImageAsset.onBoardingImageOne),
+      title: "title1 onB".tr,
+      body: "body onB".tr,
+      image: AppImageAsset.onBoardingImageOne),
   OnBoardingModel(
-      title: "Easy And Safe Paymnet",
-      body: "We Have a 100k Product , Choose \n Your Product From Our E-commerce Shop",
-      image: ImageAsset.onBoardingImageTwo),
+      title: "title2 onB".tr,
+      body: "body onB".tr,
+      image: AppImageAsset.onBoardingImageTwo),
   OnBoardingModel(
-      title: "Track Your Order",
-      body: "We Have a 100k Product , Choose \n Your Product From Our E-commerce Shop",
-      image: ImageAsset.onBoardingImageThree),
+      title: "title3 onB".tr,
+      body: "body onB".tr,
+      image: AppImageAsset.onBoardingImageThree),
   // OnBoardingModel(
   //     title: "Fast Delivery",
   //     body: "We Have a 100k Product , Choose \n Your Product From Our E-commerce Shop",

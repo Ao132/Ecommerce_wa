@@ -1,49 +1,135 @@
 import 'package:ecom_wael_hamza/core/constants/app_colors.dart';
+import 'package:ecom_wael_hamza/core/services/services.dart';
+import 'package:ecom_wael_hamza/view/widgets/auth/custom_button_auth.dart';
+import 'package:ecom_wael_hamza/view/widgets/auth/custom_subtitle_auth.dart';
+import 'package:ecom_wael_hamza/view/widgets/auth/custom_text_form_auth.dart';
+import 'package:ecom_wael_hamza/view/widgets/auth/custom_title_auth.dart';
+import 'package:ecom_wael_hamza/view/widgets/auth/logo_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Login extends StatelessWidget {
-  const Login({super.key});
+  Login({super.key});
+  MyServices myServices = Get.find();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text(
-            'Sign In',
-            style: Theme.of(context).textTheme.displayLarge!.copyWith(fontSize: 20, color: AppColors.grey),
-          ),
-          elevation: 0.0,
-          backgroundColor: AppColors.backgroundcolor,
-        ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 35),
-          child: ListView(
-            children: [
-              const SizedBox(height: 20),
-              Text(
-                '2'.tr,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.displayMedium,
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    return myServices.sharedPreferences.getString('lang') == 'ar'
+        ? Scaffold(
+            appBar: AppBar(
+              centerTitle: true,
+              title: Text(
+                'signin'.tr,
+                style: Theme.of(context).textTheme.displayLarge!.copyWith(fontSize: 20, color: AppColors.grey),
               ),
-              const SizedBox(height: 10),
-              Text(
-                '3'.tr,
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodyLarge,
+              elevation: 0.0,
+              backgroundColor: AppColors.backgroundcolor,
+            ),
+            body: Padding(
+              padding: EdgeInsets.symmetric(vertical: height * .001, horizontal: width * .08),
+              child: ListView(
+                children: [
+                  const LogoAuth(),
+                  SizedBox(height: height * .01),
+                  CustomTitleAuth(text: 'welcome message'.tr + ' !'),
+                  SizedBox(height: height * .01),
+                  CustomSubTitleAuth(text: 'subtitle log'.tr),
+                  SizedBox(height: height * .04),
+                  CustomTextFormAuth(
+                    labeltext: 'labelemail log'.tr,
+                    hinttext: 'hintemail log'.tr,
+                    iconData: Icons.email_outlined,
+                  ),
+                  SizedBox(height: height * .03),
+                  CustomTextFormAuth(
+                    labeltext: 'labelpassword log'.tr,
+                    hinttext: 'hintpassword log'.tr,
+                    iconData: Icons.lock_outline,
+                  ),
+                  SizedBox(height: height * .04),
+                  Text(
+                    "forgetpassword log".tr,
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                    // textAlign: TextAlign.end,
+                  ),
+                  SizedBox(height: height * .03),
+                  CustomButtonAuth(text: 'signin'.tr, onPressed: () {}),
+                  SizedBox(height: height * .04),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "donthaveaccount log".tr,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Text("signup".tr, style: const TextStyle(color: AppColors.primaryColor, fontWeight: FontWeight.bold)),
+                      )
+                    ],
+                  )
+                ],
               ),
-              const SizedBox(height: 55),
-              TextFormField(
-                decoration: InputDecoration(
-                    suffixIcon: const Icon(Icons.email_outlined),
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 30),
-                    label: const Text('Email'),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(30))),
-              )
-            ],
-          ),
-        ));
+            ))
+        : Scaffold(
+            appBar: AppBar(
+              centerTitle: true,
+              title: Text(
+                'signin'.tr,
+                style: Theme.of(context).textTheme.displayLarge!.copyWith(fontSize: 20, color: AppColors.grey),
+              ),
+              elevation: 0.0,
+              backgroundColor: AppColors.backgroundcolor,
+            ),
+            body: Padding(
+              padding: EdgeInsets.symmetric(vertical: height * .01, horizontal: width * .08),
+              child: ListView(
+                children: [
+                  // SizedBox(height: height * .02),
+                  const LogoAuth(),
+                  SizedBox(height: height * .01),
+                  CustomTitleAuth(text: 'welcome message'.tr + ' !'),
+                  SizedBox(height: height * .02),
+                  CustomSubTitleAuth(text: 'subtitle log'.tr),
+                  SizedBox(height: height * .04),
+                  CustomTextFormAuth(
+                    labeltext: 'labelemail log'.tr,
+                    hinttext: 'hintemail log'.tr,
+                    iconData: Icons.email_outlined,
+                  ),
+                  SizedBox(height: height * .03),
+                  CustomTextFormAuth(
+                    labeltext: 'labelpassword log'.tr,
+                    hinttext: 'hintpassword log'.tr,
+                    iconData: Icons.lock_outline,
+                  ),
+                  SizedBox(height: height * .04),
+
+                  Text(
+                    "forgetpassword log".tr,
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                    // textAlign: TextAlign.end,
+                  ),
+                  SizedBox(height: height * .03),
+
+                  CustomButtonAuth(text: 'signin'.tr, onPressed: () {}),
+                  SizedBox(height: height * .04),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "donthaveaccount log".tr,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      InkWell(
+                        child: Text("signup".tr, style: const TextStyle(color: AppColors.primaryColor, fontWeight: FontWeight.bold)),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ));
   }
 }

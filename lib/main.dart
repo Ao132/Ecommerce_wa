@@ -24,11 +24,10 @@ class MyApp extends StatelessWidget {
       locale: controller.language,
       translations: Translation(),
       theme: ThemeData(
-        fontFamily: 'PlayfairDisplay',
         textTheme: const TextTheme(
           displayLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: AppColors.black),
           displayMedium: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: AppColors.black),
-          bodyLarge: TextStyle(height: 2, color: AppColors.grey, fontWeight: FontWeight.bold, fontSize: 16),
+          bodyLarge: TextStyle(height: 1.5, color: AppColors.grey, fontWeight: FontWeight.bold, fontSize: 15),
         ),
       ),
       home: const Language(),
