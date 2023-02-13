@@ -1,8 +1,8 @@
-
-import 'package:ecom_wael_hamza/controller/on_boarding_controller.dart';
-import 'package:ecom_wael_hamza/core/constants/app_colors.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+import 'package:ecom_wael_hamza/core/constants/app_colors.dart';
+import 'package:ecom_wael_hamza/controller/on_boarding_controller.dart';
+
 
 class CustomButtonOnBoarding extends GetView<OnBoardingControllerImpl> {
   const CustomButtonOnBoarding({Key? key}) : super(key: key);
@@ -15,10 +15,10 @@ class CustomButtonOnBoarding extends GetView<OnBoardingControllerImpl> {
           padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 0),
           textColor: Colors.white,
           onPressed: () {
-            controller.next() ; 
+            controller.next();
           },
           color: AppColors.primaryColor,
-          child:  Text("continue onB".tr)),
+          child: Text("continue onB".tr)),
     );
   }
 }

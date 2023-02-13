@@ -1,6 +1,6 @@
-import 'package:ecom_wael_hamza/core/services/services.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:ecom_wael_hamza/core/services/services.dart';
 
 class LocaleController extends GetxController {
   Locale? language;

@@ -1,12 +1,11 @@
-import 'package:ecom_wael_hamza/core/localization/change_local.dart';
 import 'package:get/get.dart';
 import 'core/services/services.dart';
 import 'package:flutter/material.dart';
 import 'package:ecom_wael_hamza/routes.dart';
 import 'package:ecom_wael_hamza/view/screens/language.dart';
-import 'package:ecom_wael_hamza/view/screens/onboarding.dart';
 import 'package:ecom_wael_hamza/core/constants/app_colors.dart';
 import 'package:ecom_wael_hamza/core/localization/translation.dart';
+import 'package:ecom_wael_hamza/core/localization/change_local.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,11 +1,10 @@
-import 'package:ecom_wael_hamza/controller/on_boarding_controller.dart';
+import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 import 'package:ecom_wael_hamza/core/constants/app_colors.dart';
-import 'package:ecom_wael_hamza/data/data_source/static/static.dart';
-import 'package:ecom_wael_hamza/view/widgets/onboarding/custom_Button_onboarding.dart';
+import 'package:ecom_wael_hamza/controller/on_boarding_controller.dart';
 import 'package:ecom_wael_hamza/view/widgets/onboarding/custom_slider.dart';
 import 'package:ecom_wael_hamza/view/widgets/onboarding/dots_controller.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:ecom_wael_hamza/view/widgets/onboarding/custom_Button_onboarding.dart';
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({Key? key}) : super(key: key);

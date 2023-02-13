@@ -1,7 +1,5 @@
 import 'package:ecom_wael_hamza/core/constants/image_asset_constant.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class LogoAuth extends StatelessWidget {
   const LogoAuth({super.key});

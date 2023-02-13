@@ -1,7 +1,7 @@
+import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 import 'package:ecom_wael_hamza/core/constants/routes_names.dart';
 import 'package:ecom_wael_hamza/data/data_source/static/static.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 abstract class OnBoardingController extends GetxController {
   next();
