@@ -1,3 +1,5 @@
+import 'package:ecom_wael_hamza/view/screens/auth/sign_up.dart';
+import 'package:ecom_wael_hamza/view/screens/onboarding.dart';
 import 'package:get/get.dart';
 import 'core/services/services.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +8,8 @@ import 'package:ecom_wael_hamza/view/screens/language.dart';
 import 'package:ecom_wael_hamza/core/constants/app_colors.dart';
 import 'package:ecom_wael_hamza/core/localization/translation.dart';
 import 'package:ecom_wael_hamza/core/localization/change_local.dart';
+
+import 'test.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,7 +33,8 @@ class MyApp extends StatelessWidget {
           bodyLarge: TextStyle(height: 1.5, color: AppColors.grey, fontWeight: FontWeight.bold, fontSize: 15),
         ),
       ),
-      home: const Language(),
+      // home:  Test(),
+      home:  Language(),
       routes: routes,
     );
   }
