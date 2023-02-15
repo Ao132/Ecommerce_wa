@@ -15,7 +15,6 @@ class Translation extends Translations {
           'continue_onB': 'التالي',
 
           //signin screen
-          'signin': 'تسجيل الدخول',
           'welcome_message': 'اهلا بعودتك',
           'subtitle_signin': 'سجل الدخول باستخدام الايميل و الباسورد او اكمل باستخدام التواصل الاجتماعي',
           'forgetpassword_signin': 'هل نسيت كلمة المرور ؟',
@@ -30,29 +29,63 @@ class Translation extends Translations {
           'phonehint_signup': 'ادخل رقم الهاتف',
           'haveaccount_signup': 'لديك حساب مسجل ؟',
 
-          //shared between signin screen and signup screen
+          //check email signup screen
+          'checksignuptitle_checkemailsignup': 'تم إنشاء الحساب بنجاح',
+          'subtitle_checkemailsignup': 'خطوة واحدة أخري ، من فضلك ادخل البريد الإلكتروني لإرسال رمز التحقق',
+
+          //success signup screen
+          'successtitle_signup':'تم إنشاء الحساب بنجاح',
+
+
+//
+          //shared between signin screen/signup/reset/forget/success signup/success signin
+
+          //sign/signup/reset
           'labelemail': 'البريد الإلكتروني',
           'hintemail': 'ادخل بريدك الإلكتروني',
 
           'labelpassword': 'كلمة المرور',
           'hintpassword': 'ادخل كلمة المرور',
 
+          //signin/success signup/success signin
+          'signin': 'تسجيل الدخول',
+
+          //forget/check email signup
+          'checkbutton': 'تحقق',
+
+          //verify signup/verify reset
+          'checkcodetitle_verify': 'التحقق من الرمز',
+          'subtitle_verify': 'من فضلك ارسل رمز التحقق المرسل علي ',
+
+
+//
+
           //forget screen
           'forgetpasswordtitle_forget': 'هل نسيت كلمة المرور',
           'checkemailtitle_forget': 'تحقق من البريد الإلكتروني ',
           'subtitle_forget': 'من فضلك ادخل البريد الإلكتروني لإرسال رمز التحقق',
-          'checkbutton_forget': 'تحقق',
 
-          //verify screen
-          'verifytitle_verify': 'رمز التحقق',
-          'checkcodetitle_verify': 'التحقق من الرمز',
-          'subtitle_verify': 'من فضلك ارسل رمز التحقق المرسل علي ',
+          //verify reset screen
+          //shared
+
 
           //reset screen
           'resettitle_reset': 'إعادة تعين كلمة المرور',
           'subtitle_reset': 'ادخل كلمة مرور جديدة',
-          'hintpassword_reset':'اعد ادخال كلمة المرور',
+          'hintpassword_reset': 'اعد ادخال كلمة المرور',
           'savebutton_reset': 'حفظ',
+
+          //success reset screen
+          'successtitle_reset':'تم إعادة تعين كلمة المرور بنجاح',
+
+
+          //form field
+          'username_form':'اسم مستخدم غير صالح',
+          'email_form':'بريد إلكتروني غير صالح',
+          'phone_form':'رقم هاتف غير صالح',
+          'cantbeempty_form':"لا يمكن ان يكون فارغ",
+          'cantbelessthan_form':"لا يمكن ان يكون اقل من ",
+          'cantbelargerthan_form':"لا يمكن ان يكون اكبر من ",
 
         },
         'en': {
@@ -67,7 +100,6 @@ class Translation extends Translations {
           'continue_onB': 'Continue',
 
           //signin screen
-          'signin': 'Sign In',
           'welcome_message': 'Welcom Back',
           'subtitle_signin': 'Sign In With Your Email And Password OR Continue With Social Media',
           'forgetpassword_signin': 'Forget Password ?',
@@ -82,29 +114,62 @@ class Translation extends Translations {
           'phonehint_signup': 'Enter Your Phone',
           'haveaccount_signup': 'have an account ? ',
 
-          //shared between signin screen and signup screen and reset screen
+          //check email signup screen
+          'checksignuptitle_checkemailsignup': 'Success Sign Up',
+          'subtitle_checkemailsignup': 'One Step Remaining , Please Enter Your Email Address To Send A Verification Code ',
+
+          //success signup screen
+          'successtitle_signup':'successfully registered',
+
+//
+          //shared between signin screen/signup/reset/forget/success signup/success signin/verify signup/verify reset
+        
+         //signin/signup/reset
           'labelemail': 'Email',
           'hintemail': 'Enter Your Email',
 
           'labelpassword': 'Password',
           'hintpassword': 'Enter Your Password',
 
+          //signin/success signup/success signin
+          'signin': 'Sign In',
+
+          //forget/check email signup
+          'checkbutton': 'Check',
+
+          //verify signup/verify reset
+          'checkcodetitle_verify': 'Check Code',
+          'subtitle_verify': 'Please Enter The Digit Code which Sent To ahmed@gmail.com',
+
+
+//
+
           //forget screen
           'forgetpasswordtitle_forget': 'Forget Password',
           'checkemailtitle_forget': 'Check Email',
           'subtitle_forget': 'Please Enter Your Email Address To Send A Verification Code',
-          'checkbutton_forget': 'Check',
 
-          //verify screen
-          'verifytitle_verify': 'verification Code',
-          'checkcodetitle_verify': 'Check Code',
-          'subtitle_verify': 'Please Enter The Digit Code which Sent To ahmed@gmail.com',
+          //verify reset screen
+          //shared
+
 
           //reset screen
           'resettitle_reset': 'Reset Password',
           'subtitle_reset': 'Enter New Password',
-          'hintpassword_reset':'Re Enter Your Password',
+          'hintpassword_reset': 'Re Enter Your Password',
           'savebutton_reset': 'Save',
+
+          //success reset screen
+          'successtitle_reset':'Password has been reset successfully',
+
+          //form field
+          'username_form':'Not Valid UserName',
+          'email_form':'Not Valid Email',
+          'phone_form':'Not Valid Phone',
+          'cantbeempty_form':"Can't Be Empty",
+          'cantbelessthan_form':"Can't Be Less Than",
+          'cantbelargerthan_form':"Can't Be Larger Than",
+
         },
       };
 }

@@ -20,7 +20,7 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImpl> {
               children: [
                 Image.asset(
                   onBoardingList[i].image!,
-                  height: 350,
+                  height: Get.width / 1.1,
                 ),
                 const SizedBox(height: 50),
                 Text(onBoardingList[i].title!, style: Theme.of(context).textTheme.displayLarge),

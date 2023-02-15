@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:get/get.dart';
 import 'package:flutter/widgets.dart';
 import 'package:ecom_wael_hamza/core/constants/routes_names.dart';
@@ -9,6 +10,8 @@ abstract class ForgetPasswordController extends GetxController {
 
 class ForgetPasswordControllerImpl extends ForgetPasswordController {
   late TextEditingController email;
+  GlobalKey<FormState> formState = GlobalKey<FormState>();
+
 
 
  @override
@@ -18,7 +21,16 @@ class ForgetPasswordControllerImpl extends ForgetPasswordController {
 
   @override
   goToVerification() {
-    Get.toNamed(AppRouteName.verifyCode);
+
+
+ if (formState.currentState!.validate()) {
+    Get.toNamed(AppRouteName.verifyReset);
+
+    }else{
+      log('Not Valid');
+      
+    }
+
   }
 
   @override

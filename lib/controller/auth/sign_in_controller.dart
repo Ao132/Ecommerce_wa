@@ -1,28 +1,42 @@
+import 'dart:developer';
 import 'package:get/get.dart';
 import 'package:flutter/widgets.dart';
 import 'package:ecom_wael_hamza/core/constants/routes_names.dart';
 
-abstract class LoginController extends GetxController {
+abstract class SignInController extends GetxController {
   login();
   goToSignUp();
   goToForgetPassword();
 }
 
-class LoginControllerImpl extends LoginController {
+class SignInControllerImpl extends SignInController {
+  GlobalKey<FormState> formState = GlobalKey<FormState>();
   late TextEditingController email;
   late TextEditingController password;
+  bool isShowPassword = true;
 
   @override
-  login() {}
+  login() {
+    if (formState.currentState!.validate()) {
+      log('Valid');
+    } else {
+      log('Not Valid');
+    }
+  }
 
   @override
   goToSignUp() {
-    Get.toNamed(AppRouteName.signUp);
+    Get.offNamed(AppRouteName.signUp);
   }
 
   @override
   goToForgetPassword() {
     Get.toNamed(AppRouteName.forgetPassword);
+  }
+
+  showPassword() {
+    isShowPassword = isShowPassword == true ? false : true;
+    update();
   }
 
   @override
@@ -34,6 +48,7 @@ class LoginControllerImpl extends LoginController {
 
   @override
   void dispose() {
+    super.dispose();
     email.dispose();
     password.dispose();
   }

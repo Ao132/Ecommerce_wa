@@ -1,3 +1,4 @@
+import 'package:ecom_wael_hamza/core/services/services.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:ecom_wael_hamza/core/constants/routes_names.dart';
@@ -11,10 +12,12 @@ abstract class OnBoardingController extends GetxController {
 class OnBoardingControllerImpl extends OnBoardingController {
   late PageController pageController;
   int currentPage = 0;
+  MyServices myServices = Get.find();
   @override
   next() {
     currentPage++;
     if (currentPage > onBoardingList.length - 1) {
+      myServices.sharedPreferences.setString('onboarding', '1');
       Get.offAllNamed(AppRouteName.signIn);
     } else {
       pageController.animateToPage(currentPage, duration: const Duration(milliseconds: 400), curve: Curves.easeInOut);
